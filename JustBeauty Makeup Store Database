@@ -1,0 +1,33 @@
+--Create a grocery store database
+
+CREATE TABLE JustBeauty (id INTEGER PRIMARY KEY, product TEXT, category TEXT, price INTEGER,
+rating INTEGER);
+
+
+INSERT INTO JustBeauty VALUES (1, 'foundation', 'makeup', 49.00, 4.5);
+INSERT INTO JustBeauty VALUES (2, 'concealer', 'makeup', 37.00, 4);
+INSERT INTO JustBeauty VALUES (3, 'lipstick', 'makeup', 22.00, 5);
+INSERT INTO JustBeauty VALUES (4, 'eyeliner', 'makeup', 23.99, 5);
+INSERT INTO JustBeauty VALUES (5, 'mascara', 'makeup', 29.00, 3);
+INSERT INTO JustBeauty VALUES (6, 'parfum', 'fragrance', 68.00, 4);
+INSERT INTO JustBeauty VALUES (7, 'parfum', 'fragrance', 45.00, 5);
+INSERT INTO JustBeauty VALUES (8, 'toner', 'skin care', 10.99, 4.5);
+INSERT INTO JustBeauty VALUES (9, 'cleanser', 'skin care', 19.99, 3.5);
+INSERT INTO JustBeauty VALUES (10, 'moisturizer', 'skin care', 59.00, 4.5);
+INSERT INTO JustBeauty VALUES (11, 'eye cream', 'skin care', 23.99, 3);
+INSERT INTO JustBeauty VALUES (12, 'face serum', 'skin care', 19.00, 3.5);
+INSERT INTO JustBeauty VALUES (13, 'lotion', 'body care', 10.49, 5);
+INSERT INTO JustBeauty VALUES (14, 'conditioner', 'hair care', 34.00, 4.5);
+INSERT INTO JustBeauty VALUES (15, 'shampoo', 'hair care', 34.99, 4);
+
+
+--Display the database ordered by price. 
+SELECT * FROM JustBeauty
+ORDER BY price desc;
+
+
+--What are the most 5 popular items? 
+SELECT product, price, rating
+FROM JustBeauty
+order by rating desc
+limit 5;
